@@ -1,2 +1,2 @@
 # electron-sample
-Electron sample app
+Electron sample app for testing various things
