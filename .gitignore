@@ -29,3 +29,7 @@ node_modules
 public/built
 
 *-darwin-x64
+
+dist
+
+.DS_Store
