@@ -53,7 +53,7 @@
   "standard": {
     "ignore": [
       "node_modules",
-      "MyApp-*"
+      "MyApp-darwin-x64/**"
     ]
   },
   "pre-commit": [
