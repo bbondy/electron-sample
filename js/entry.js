@@ -4,6 +4,6 @@ const ReactDOM = require('react-dom')
 import App from './components/app'
 
 ReactDOM.render(
-  <App/>,
+  <App />,
   document.getElementById('appContainer'))
 

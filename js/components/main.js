@@ -1,14 +1,14 @@
 const React = require('react')
 const ImmutableComponent = require('./immutableComponent')
-const AppActions = require('../actions/appActions')
+const appActions = require('../actions/appActions')
 
 class Main extends ImmutableComponent {
   onDecrement () {
-    AppActions.decrement()
+    appActions.decrement()
   }
 
   onIncrement () {
-    AppActions.increment()
+    appActions.increment()
   }
 
   render () {

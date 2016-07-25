@@ -14,11 +14,15 @@ let appState = Immutable.fromJS({
 
 var CHANGE_EVENT = 'change'
 
-const increment = () =>
+const increment = () => {
   appState = appState.setIn(['someObj', 'counter'], appState.getIn(['someObj', 'counter']) + 1)
+  return appState
+}
 
-const decrement = () =>
+const decrement = () => {
   appState = appState.setIn(['someObj', 'counter'], appState.getIn(['someObj', 'counter']) - 1)
+  return appState
+}
 
 class AppStore extends EventEmitter {
   isAbove10 () {

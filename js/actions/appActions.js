@@ -1,7 +1,7 @@
 var AppDispatcher = require('../dispatcher/appDispatcher')
 var AppConstants = require('../constants/appconstants')
 
-const AppActions = {
+const appActions = {
   increment: function (text) {
     AppDispatcher.dispatch({
       actionType: AppConstants.APP_INCREMENT,
@@ -18,4 +18,4 @@ const AppActions = {
   }
 }
 
-module.exports = AppActions
+module.exports = appActions

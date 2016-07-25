@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: './public/built',
     filename: 'bundle.js',
-    publicPath: 'http://localhost:8080/built/',
+    publicPath: 'http://localhost:8081/built/',
     sourceMapFilename: '[file].map',
     stats: { colors: true }
   },
@@ -53,7 +53,7 @@ module.exports = {
   ],
   devServer: {
     contentBase: './public',
-    publicPath: 'http://localhost:8080/built/'
+    publicPath: 'http://localhost:8081/built/'
   }
 }
 

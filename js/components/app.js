@@ -2,25 +2,25 @@
 
 const React = require('react')
 const Immutable = require('immutable')
-const AppStore = require('../stores/appStore')
+const appStore = require('../stores/appStore')
 const Main = require('./main')
 
 class App extends React.Component {
   constructor () {
     super()
-    this.state = AppStore.getAppState()
+    this.state = appStore.getAppState()
   }
 
   render () {
-    return <div><Main someObj={AppStore.getSomeObj()}/></div>
+    return <div><Main someObj={appStore.getSomeObj()} /></div>
   }
 
   componentDidMount () {
-    AppStore.addChangeListener(this.onChange.bind(this))
+    appStore.addChangeListener(this.onChange.bind(this))
   }
 
   componentWillUnmount () {
-    AppStore.removeChangeListener(this.onChange.bind(this))
+    appStore.removeChangeListener(this.onChange.bind(this))
   }
 
   shouldComponentUpdate (nextProps, nextState) {
@@ -29,7 +29,7 @@ class App extends React.Component {
 
   onChange () {
     this.setState({
-      immutableData: AppStore.getAppState()
+      immutableData: appStore.getAppState()
     })
   }
 }
